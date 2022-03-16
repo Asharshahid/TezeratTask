@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,500;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Piazzolla', serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: rgb(23, 104, 197);
+}
+
+html {
+    font-size: 60.5%;
+    /* font-size: 100%; */
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.logo span {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.fa-snowflake {
+    font-size: 2rem;
+    color: var(--main-color);
+    animation: round 2s linear infinite;
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: var(--main-color);
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 8px 6px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 14px;
+}
+
+header nav ul li a:hover {
+    transition: 1s;
+    color: var(--main-color);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:700px) {
+    #menu-btn {
+        display: inline-block;
+        color: #fff;
+        font-size: 3rem;
+        ;
+    }
+    header .navbar {
+        position: absolute;
+        top: 70px;
+        left: -120%;
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(23, 104, 197, 0.911);
+        padding: 0;
+    }
+    header .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    header .navbar ul li {
+        margin: 20px;
+    }
+    header .navbar.active {
+        transition: 1s ease-in;
+        left: 0px;
+    }
+}
+
+
+/* weather $$$$$$$$$$$$$ */
+
+footer {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 6rem;
+    margin-top: auto;
+}
+
+
+/* $$$$$$$$$$$$$$$$$ */
+
+
+.HomeArea {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 4%;
+}
+
+.left_side h3 {
+    font-size: 2rem;
+    margin: 2rem 2rem;
+}
+
+.left_side h1 {
+    font-size: 2.5rem;
+    margin: 1rem 2rem;
+}
+
+.left_side span {
+    color: var(--main-color);
+}
+
+.left_side a {
+    display: inline-block;
+    margin: 2rem;
+    padding: 4px 12px;
+    color: #fff;
+    background-color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.right_side {
+    margin: 2rem 0;
+}
+
+.right_side img {
+    width: 400px;
+    height: 250px;
+}
+
+@media screen and (max-width:500px) {
+    .right_side img {
+        width: 250px;
+    }
+}
+
+/* @media screen and (max-width:900px) {
+    header {
+        padding: 2rem 0;
+    }
+} */
+
+
+/* ID WORKING MAIN  */
+
+#cityPopup {
+    text-transform: capitalize;
+}
+
+.hiddendataArea {
+    opacity: 0;
+}
+
+
+/* ABOUT )))))))))))))))))))) */
+
+.aboutMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin-top: 5rem;
+}
+
+.aboutMain p {
+    font-size: 2rem;
+    color: var(--main-bg);
+}
+
+.aboutMain h1 {
+    font-size: 3.5rem;
+}
+
+@media screen and (max-width:600px) {
+    .aboutMain p {
+        font-size: 1.1rem;
+    }
+    .aboutMain h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .aboutMain p {
+        font-size: 1.1rem;
+    }
+    .aboutMain h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.aboutMain span {
+    color: var(--main-color);
+}
+
+.aboutMain a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 8px 14px;
+    color: white;
+    background-color: var(--main-color);
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.aboutMain a:hover,
+.left_side a:hover {
+    transition: 1s;
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.aboutMain .aboutContant {
+    margin: 10px;
+}
+
+
+/* SIGNUP FORM DESIGN */
+
+.formsignup{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */;
+    margin: auto;
+    min-width: 350px;
+    /* background-color: aqua; */
+    /* justify-content: center; */
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:600px) {
+    .formsignup{
+        min-width: 330px;
+    }
+}
+@media screen and (max-width:400px) {
+    .formsignup{
+        min-width: 300px;
+    }
+}
+@media screen and (max-width:340px) {
+    .formsignup{
+        min-width: 260px;
+    }
+}
+.formsignup h1{
+    margin: 8px 0 0 8px ;
+    font-size: 25px;
+}
+.formsignup p{
+    margin: 2px 0 18px 8px ;
+    font-size: 14px;
+    color: #767879;
+}
+.formsignup input{
+    width: 90%;
+    height: 30px;
+    margin: 5px 8px;
+    align-self: center;
+    /* border: .5px sloid rgb(240, 239, 239); */
+    padding: 3px 7px;
+    font-size: 15px;
+    /* border-radius: 3px; */
+}
+.formsignup button{
+    border-radius: 3px;
+    margin: 8px;
+    border: none;
+    padding: 8px 0px;
+    background-color: #026499;
+    color: #fff;
+    cursor: pointer;
+}
+.formsignup a{
+    margin: 8px;
+    color: #026499;
+    font-size: 13px;
+}
+
+.checkDiv{
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.checkDiv input{
+    width: 20px;
+    margin: 0px 4px;
+}
+.checkDiv p{
+    margin: 0 5px;
+    color: black;
+}
+
+/* USER PAGE ++++++++++++++++++++++++++++++++++++ */
+.user{
+    background-color: rgb(251, 251, 251);
+    display: flex;flex-direction: column;
+    min-height: 80vh;
+}
+.userAmount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.userAmountF p{
+    margin: 10px;
+    font-size: medium;
+} 
+.userAmountF .FF{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 30px 60px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 14px;
+
+}
+.userAmountS p{
+    margin: 10px;
+    font-size: medium;
+}
+.userAmountS .SF,.userAmountS .SS{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    background-color: rgb(250, 250, 250);
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.userTransactions{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.userTransactions .TM{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 10px 0; */
+    padding: 10px 0px;
+    /* border: 1px solid black; */
+
+}
+.userTransactions .TM p{
+    font-size: medium;
+}
+.userTransactions .TM button{
+    border: none;
+    padding: 8px 14px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.userTransactions .TH{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 1px;
+}
+
+.userTransactions .TP{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 1px;
+}
+
+
+/* SIGNUP FORM DESIGN */
+
+.formAdd{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */;
+    margin: auto;
+    min-width: 350px;
+    background-color:white;
+    /* justify-content: center; */
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:600px) {
+    .formAdd{
+        min-width: 330px;
+    }
+}
+@media screen and (max-width:400px) {
+    .formAdd{
+        min-width: 300px;
+    }
+}
+@media screen and (max-width:340px) {
+    .formAdd{
+        min-width: 260px;
+    }
+}
+.formAdd h1{
+    margin: 8px 0 0 8px ;
+    font-size: 25px;
+}
+.formAdd p{
+    margin: 2px 0 18px 8px ;
+    font-size: 14px;
+    color: #767879;
+}
+.formAdd input{
+    width: 90%;
+    height: 30px;
+    margin: 5px 8px;
+    align-self: center;
+    /* border: .5px sloid rgb(240, 239, 239); */
+    padding: 3px 7px;
+    font-size: 15px;
+    /* border-radius: 3px; */
+}
+.formAdd button{
+    border-radius: 3px;
+    margin: 8px;
+    border: none;
+    padding: 8px 0px;
+    background-color: #026499;
+    color: #fff;
+    cursor: pointer;
+}
+.formAdd a{
+    margin: 8px;
+    color: #026499;
+    font-size: 13px;
+}
+
+.checkDiv{
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.checkDiv input{
+    width: 20px;
+    margin: 0px 4px;
+}
+.checkDiv p{
+    margin: 0 5px;
+    color: black;
+}
+
+.userTransactions{
+    position: relative;
+}
+
+.userTransactions .formAdd{
+    position: absolute;
+    left: -110%;
+}
+.userTransactions .formAdd.active{
+    left: 34%;
+    transition: 1s;
+}
+@media screen and (max-width:1000px) {
+    .userTransactions .formAdd.active{
+        left: 30%;
+        transition: 1s;
+    }   
+}
+@media screen and (max-width:900px) {
+    .userTransactions .formAdd.active{
+        left: 25%;
+        transition: 1s;
+    }   
+}
+@media screen and (max-width:700px) {
+    .userTransactions .formAdd.active{
+        left: 15%;
+        transition: 1s;
+    }   
+}
+.homeM{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+.home img{
+    max-width: 100px;
+    max-height: 200px;
+}
+.homeM span{
+    color: var(--main-color);
+}
+.secondHome{
+    margin: 20px 10px;
+}
+.secondHome h3{
+    font-size: 25px;
+    color: rgb(68, 67, 67);
+}
+.secondHome h1{
+    color: rgb(68, 67, 67);
+}
+.secondHome a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    margin-top: 1rem;
+}
